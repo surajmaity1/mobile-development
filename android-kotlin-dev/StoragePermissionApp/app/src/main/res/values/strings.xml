@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StoragePermissionApp</string>
+    <string name="button_for_permission">Button For Permission</string>
+</resources>
