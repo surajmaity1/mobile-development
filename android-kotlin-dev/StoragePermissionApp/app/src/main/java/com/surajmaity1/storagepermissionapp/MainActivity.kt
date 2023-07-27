@@ -1,6 +1,8 @@
 package com.surajmaity1.storagepermissionapp
 
+import android.Manifest
 import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -13,8 +15,12 @@ class MainActivity : AppCompatActivity() {
 
     private val STORAGE_REQUEST_PERMISSION_CODE = 1
     private lateinit var button: Button
-    private val externalStoragePermission = android.Manifest.permission.READ_EXTERNAL_STORAGE
+    //private val externalStoragePermission = android.Manifest.permission.READ_EXTERNAL_STORAGE
 
+    private val externalStoragePermission =
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+            Manifest.permission.READ_MEDIA_IMAGES
+        else Manifest.permission.READ_EXTERNAL_STORAGE
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -42,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 .setPositiveButton("Ok") { _, _ ->
                     ActivityCompat.requestPermissions(
                         this,
-                        arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
+                        arrayOf(externalStoragePermission),
                         STORAGE_REQUEST_PERMISSION_CODE)
                 }
                 .setNegativeButton("Cancel") { dialogInterface, _ ->
@@ -54,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         else {
             ActivityCompat.requestPermissions(
                 this,
-                arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
+                arrayOf(externalStoragePermission),
                 STORAGE_REQUEST_PERMISSION_CODE)
         }
     }

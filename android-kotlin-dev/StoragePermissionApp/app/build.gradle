@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.surajmaity1.storagepermissionapp'
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.surajmaity1.storagepermissionapp"
         minSdk 25
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
