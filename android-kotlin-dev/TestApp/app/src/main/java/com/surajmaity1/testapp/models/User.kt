@@ -1,6 +1,6 @@
 package com.surajmaity1.testapp.models
 
-data class IndividualUser(
+data class User(
     val name: String = "",
     val address: String = "",
     val km: Int = 0,

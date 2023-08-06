@@ -7,6 +7,7 @@
     tools:context=".fragments.ProfessionalFragment">
 
     <LinearLayout
+        android:id="@+id/search_filter_lin_lt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -14,25 +15,31 @@
         android:layout_marginBottom="10dp">
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_view_professional"
+            android:id="@+id/search_view_prof"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:background="@drawable/search_view_bg"
             app:queryBackground="@android:color/transparent"
+            app:queryHint="Search"
             app:iconifiedByDefault="false"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/filter_professional"
+            android:id="@+id/filter_prof"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_filter"/>
 
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/professional"
-        android:layout_centerInParent="true"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/prof_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_filter_lin_lt"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        tools:listitem="@layout/professional_user_item" />
 </RelativeLayout>

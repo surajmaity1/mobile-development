@@ -7,6 +7,7 @@
     tools:context=".fragments.MerchantFragment">
 
     <LinearLayout
+        android:id="@+id/search_filter_lin_lt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -14,26 +15,29 @@
         android:layout_marginBottom="10dp">
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_view_merchant"
+            android:id="@+id/search_view_prof"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:background="@drawable/search_view_bg"
             app:queryBackground="@android:color/transparent"
+            app:queryHint="Search"
             app:iconifiedByDefault="false"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/filter_merchant"
+            android:id="@+id/filter_prof"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_filter"/>
 
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/merchant"
-        android:layout_centerInParent="true"/>
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mer_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_filter_lin_lt"
+        android:layout_margin="18dp"
+        tools:listitem="@layout/merchant_user_item"
+        />
 
 </RelativeLayout>

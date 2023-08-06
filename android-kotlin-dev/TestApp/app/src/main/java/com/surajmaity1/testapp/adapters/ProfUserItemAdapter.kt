@@ -12,14 +12,14 @@ import com.surajmaity1.testapp.R
 import com.surajmaity1.testapp.models.User
 import java.lang.StringBuilder
 
-open class IndivUserItemAdapter (
+class ProfUserItemAdapter (
     private val context: Context,
     private var list: ArrayList<User>
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return MyViewHolder(
             LayoutInflater.from(context).inflate(
-                R.layout.individual_user_item,
+                R.layout.professional_user_item,
                 parent,
                 false
             )
@@ -31,13 +31,13 @@ open class IndivUserItemAdapter (
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val model = list[position]
 
-        val invitePending = holder.itemView.findViewById<TextView>(R.id.inv_pend)
-        var indUsrImg = holder.itemView.findViewById<ImageView>(R.id.ind_usr_img)
-        val indUsrName = holder.itemView.findViewById<TextView>(R.id.ind_usr_nm)
-        val indUsrAddKM = holder.itemView.findViewById<TextView>(R.id.ind_address_km)
-        val indUsrPrgBr = holder.itemView.findViewById<ProgressBar>(R.id.simpleProgressBar)
-        val indUsrHob = holder.itemView.findViewById<TextView>(R.id.ind_hobbies)
-        val indUsrAbout = holder.itemView.findViewById<TextView>(R.id.ind_about)
+        val profInvitePending = holder.itemView.findViewById<TextView>(R.id.inv_pend_prof)
+        val profUsrImg = holder.itemView.findViewById<ImageView>(R.id.inv_prof_usr_img)
+        val profUsrName = holder.itemView.findViewById<TextView>(R.id.prof_usr_nm)
+        val profUsrAddKM = holder.itemView.findViewById<TextView>(R.id.prof_address_km)
+        val profUsrPrgBr = holder.itemView.findViewById<ProgressBar>(R.id.prof_progress_bar)
+        val profUsrHob = holder.itemView.findViewById<TextView>(R.id.prof_exp)
+        val profUsrAbout = holder.itemView.findViewById<TextView>(R.id.prof_about)
 
         if (holder is MyViewHolder) {
 
@@ -45,17 +45,17 @@ open class IndivUserItemAdapter (
             val resources = holder.itemView.resources
 
             if (model.invitePending ) {
-                invitePending.text = resources.getString(R.string.pending)
+                profInvitePending.text = resources.getString(R.string.pending)
             }
             else {
-                invitePending.text = resources.getString(R.string.invite)
+                profInvitePending.text = resources.getString(R.string.invite)
             }
-            indUsrImg.setImageResource(model.img)
-            indUsrName.text = model.name
+            profUsrImg.setImageResource(model.img)
+            profUsrName.text = model.name
 
             val addressKm = model.address + ", within " + model.km + " Km"
-            indUsrAddKM.text = addressKm
-            indUsrPrgBr.progress = model.progress
+            profUsrAddKM.text = addressKm
+            profUsrPrgBr.progress = model.progress
 
             val str = StringBuilder()
 
@@ -63,12 +63,13 @@ open class IndivUserItemAdapter (
                 str.append("$item | ")
 
             }
-            indUsrHob.text = str
-            indUsrAbout.text = model.about
+            profUsrHob.text = str
+            profUsrAbout.text = model.about
 
 
         }
     }
 
     private class MyViewHolder(view: View) : RecyclerView.ViewHolder(view)
+
 }
