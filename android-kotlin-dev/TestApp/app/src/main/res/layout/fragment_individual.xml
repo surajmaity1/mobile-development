@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.IndividualFragment">
+
+    <LinearLayout
+        android:id="@+id/search_filter_lin_lt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view_individual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/search_view_bg"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="Search"
+            app:iconifiedByDefault="false"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/filter_individual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_filter"/>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ind_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_filter_lin_lt"
+        android:layout_margin="18dp"
+        tools:listitem="@layout/individual_user_item"
+        />
+</RelativeLayout>

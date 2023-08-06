@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="main_title_toolbar">Explore</string>
+    <string name="sub_title_toolbar">San Francisco, California</string>
+    <string name="img_desc">image_description</string>
+    <string name="notification_menu_title">Notification</string>
+    <string name="individual">INDIVIDUAL</string>
+    <string name="professional">PROFESSIONAL</string>
+    <string name="merchant">MERCHANT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="invite">+INVITE</string>
+    <string name="pending">PENDING</string>
+
+
+</resources>
