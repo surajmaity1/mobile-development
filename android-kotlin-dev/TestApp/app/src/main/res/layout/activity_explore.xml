@@ -38,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/img_desc"
-                    android:src="@drawable/ic_location" />
+                    android:src="@drawable/ic_location_toolbar" />
 
                 <TextView
                     android:id="@+id/sub_title_toolbar"

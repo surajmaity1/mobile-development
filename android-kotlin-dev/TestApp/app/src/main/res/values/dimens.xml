@@ -2,4 +2,5 @@
 <resources>
     <dimen name="toolbar_title_text_size">18sp</dimen>
     <dimen name="toolbar_sub_title_text_size">14sp</dimen>
+    <dimen name="div_hgt">1dp</dimen>
 </resources>

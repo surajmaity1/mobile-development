@@ -12,5 +12,38 @@
     <string name="invite">+INVITE</string>
     <string name="pending">PENDING</string>
 
+    <string name="main_title_toolbar_ref">Refine</string>
+    <string name="sub_title_toolbar_ref">Seattle, Washington</string>
+    <string name="sel_your_stat">Select Your Status</string>
+    <string name="bro_br_msg">Broadcast Brief Message</string>
+    <string name="nearby_dist">Select Nearby Distance</string>
+    <string name="broad_et_txt">Hi Community! I me with an accident and need immediate help.</string>
+    <string name="first_item">SOS- Emergency! Need Assistance ! HELP</string>
+    <string name="enter_broadcast_brief_msg">Enter Broadcast Brife Message</string>
+    <string name="text_view">Text View</string>
+    <string name="_500m">500m</string>
+    <string name="_100_km">100 Km</string>
+    <string name="select_purpose">Select Purpose</string>
+    <string name="coffee">Coffee</string>
+    <string name="business">Business</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="friendship">Friendship</string>
+    <string name="movies">Movies</string>
+    <string name="dining">Dining</string>
+    <string name="dating">Dating</string>
+    <string name="matrimony">Matrimony</string>
 
+    <string-array name="status_drop_list">
+        <item>SOS- Emergency! Need Assistance ! HELP</item>
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+    </string-array>
+
+    <string-array name="brod_drop_list">
+        <item>SOS- Emergency! Need Assistance ! HELP</item>
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+    </string-array>
 </resources>
