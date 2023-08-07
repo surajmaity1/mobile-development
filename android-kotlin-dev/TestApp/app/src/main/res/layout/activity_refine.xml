@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.RefineActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".activities.RefineActivity">
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_refine_activity"
@@ -157,6 +164,7 @@
         android:layout_marginStart="18dp"
         android:layout_marginEnd="18dp"
         android:layout_marginTop="18dp"
+        app:thumbColor="@color/tab_bac_color"
         android:max="100" />
 
     <LinearLayout
@@ -203,96 +211,111 @@
         android:textSize="17sp"
         android:textStyle="bold" />
 
-    <RelativeLayout
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="18dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_height="match_parent"
+        android:layout_margin="18dp"
+        android:rowCount="3"
+        android:columnCount="3"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <Button
             android:id="@+id/coffee_btn"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/customized_button"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
             android:text="@string/coffee"
+            android:textColor="@color/toolbar_color"
+            android:textSize="12sp"
+            android:background="@drawable/customized_button"
             app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/business_btn"
-            android:layout_width="115dp"
-            android:layout_marginStart="5dp"
-            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
             android:text="@string/business"
-            android:layout_toEndOf="@id/coffee_btn"
+            android:textColor="@color/toolbar_color"
+            android:textSize="12sp"
             android:background="@drawable/customized_button"
-            app:backgroundTint="@null"
-            />
+            app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/hobbies_btn"
-            android:layout_width="110dp"
-            android:layout_marginEnd="5dp"
-            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
             android:text="@string/hobbies"
-            android:layout_toEndOf="@id/business_btn"
-            android:background="@drawable/customized_button"
-            app:backgroundTint="@null"
-            />
-
-        <Button
-            android:id="@+id/friendship_btn"
-            android:layout_width="110dp"
-            android:layout_marginStart="5dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/coffee_btn"
-            android:text="@string/friendship"
-            android:background="@drawable/customized_button"
-            app:backgroundTint="@null"
-            android:layout_alignStart="@id/coffee_btn"
-            />
-
-        <Button
-            android:id="@+id/movie_btn"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:text="@string/movies"
-            android:layout_toEndOf="@id/coffee_btn"
-            android:background="@drawable/customized_button"
-            app:backgroundTint="@null"
-            android:layout_alignTop="@+id/friendship_btn"
-            android:layout_alignEnd="@+id/business_btn" />
-
-        <Button
-            android:id="@+id/dining_btn"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:text="@string/dining"
-            android:layout_toEndOf="@id/business_btn"
-            android:background="@drawable/customized_button"
-            app:backgroundTint="@null"
-            android:layout_below="@+id/hobbies_btn"
-            android:layout_alignEnd="@+id/hobbies_btn"
-            />
-
-        <Button
-            android:id="@+id/dating_btn"
-            android:layout_height="wrap_content"
-            android:layout_width="110dp"
-            android:text="@string/dating"
-            android:layout_below="@+id/friendship_btn"
-            android:layout_alignStart="@+id/friendship_btn"
-            android:background="@drawable/customized_button"
-            app:backgroundTint="@null"/>
-
-        <Button
-            android:id="@+id/matrimony_btn"
-            android:layout_height="wrap_content"
-            android:layout_width="115dp"
-            android:text="@string/matrimony"
-            android:layout_alignTop="@+id/dating_btn"
-            android:layout_alignStart="@+id/friendship_btn"
+            android:textColor="@color/toolbar_color"
+            android:textSize="12sp"
             android:background="@drawable/customized_button"
             app:backgroundTint="@null" />
-    </RelativeLayout>
+        <Button
+            android:id="@+id/friendship_btn"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:text="@string/friendship"
+            android:textColor="@color/toolbar_color"
+            android:textSize="12sp"
+            android:background="@drawable/customized_button"
+            app:backgroundTint="@null" />
+        <Button
+            android:id="@+id/movie_btn"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:text="@string/movies"
+            android:textColor="@color/toolbar_color"
+            android:textSize="12sp"
+            android:background="@drawable/customized_button"
+            app:backgroundTint="@null" />
+        <Button
+            android:id="@+id/dining_btn"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:text="@string/dining"
+            android:textColor="@color/toolbar_color"
+            android:textSize="12sp"
+            android:background="@drawable/customized_button"
+            app:backgroundTint="@null" />
+        <Button
+            android:id="@+id/dating_btn"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:text="@string/dating"
+            android:textColor="@color/toolbar_color"
+            android:textSize="12sp"
+            android:background="@drawable/customized_button"
+            app:backgroundTint="@null" />
+        <Button
+            android:id="@+id/matrimony_btn"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
+            android:text="@string/matrimony"
+            android:textColor="@color/toolbar_color"
+            android:textSize="12sp"
+            android:background="@drawable/customized_button"
+            app:backgroundTint="@null" />
+    </GridLayout>
 
 </LinearLayout>
+</ScrollView>

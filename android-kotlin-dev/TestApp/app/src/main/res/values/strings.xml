@@ -32,6 +32,10 @@
     <string name="dining">Dining</string>
     <string name="dating">Dating</string>
     <string name="matrimony">Matrimony</string>
+    <string name="refine_screen">Refine Screen</string>
+    <string name="explore_screen">Explore Screen</string>
+    <string name="main_activity">Main Activity</string>
+    <string name="clk_btn_activity">Click Buttons To Open Each Activity</string>
 
     <string-array name="status_drop_list">
         <item>SOS- Emergency! Need Assistance ! HELP</item>
