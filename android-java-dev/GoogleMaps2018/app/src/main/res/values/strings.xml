@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">GoogleMaps2018</string>
-
-
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
@@ -21,6 +19,7 @@
     <string name="email_registration">Email Registration</string>
     <string name="email">Email</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="google_map_api_key">AIzaSyCYrieE2Bva_593HTs6iAES-90fsVQ0uJA</string>
 
     <!-- Firestore Strings -->
     <string name="collection_users">Users</string>
