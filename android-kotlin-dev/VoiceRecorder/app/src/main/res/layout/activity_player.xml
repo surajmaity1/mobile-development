@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_img"
+    tools:context=".activities.PlayerActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/player_toolbar"
+        android:background="@color/color_toolbar"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="200dp"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/player_toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            tools:text="@string/media_player"
+            android:textColor="@color/white"
+            android:textSize="@dimen/slf_head_txt_sz"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:orientation="vertical"
+        >
+
+        <SeekBar
+            android:id="@+id/seek_bar_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
+            android:progress="70"
+            android:progressTint="@color/color_toolbar"
+            android:thumbTint="@color/color_toolbar"
+            />
+
+
+        <ImageButton
+            android:id="@+id/pl_ps_btn_player"
+            android:layout_width="@dimen/img_button_sz"
+            android:layout_height="@dimen/img_button_sz"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_pl_btn"
+            android:background="@drawable/customized_button"
+            android:contentDescription="@string/image_button"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+</LinearLayout>

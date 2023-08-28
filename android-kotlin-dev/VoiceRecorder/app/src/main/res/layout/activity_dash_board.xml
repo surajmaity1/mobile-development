@@ -1,9 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_img"
     tools:context=".activities.DashBoardActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/dashboard_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_toolbar">
+
+            <TextView
+                android:id="@+id/dashboard_toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/VoiceRecorder"
+                android:textColor="@color/white"
+                android:textSize="@dimen/slf_head_txt_sz"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/tim_cal_txt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="50dp"
+            android:text="@string/default_timer"
+            android:textColor="@color/black"
+            android:textSize="@dimen/timer_txt_sz"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="80dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/record_btn"
+                android:layout_width="@dimen/img_button_sz"
+                android:layout_height="@dimen/img_button_sz"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/customized_button"
+                android:contentDescription="@string/image_button"
+                android:src="@drawable/icon_pl_btn"
+                app:backgroundTint="@null" />
+
+
+            <ImageButton
+                android:id="@+id/done_btn"
+                android:layout_width="@dimen/img_button_sz"
+                android:layout_height="@dimen/img_button_sz"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/customized_button"
+                android:contentDescription="@string/image_button"
+                android:src="@drawable/icon_dn_btn"
+                app:backgroundTint="@null" />
+
+            <ImageButton
+                android:id="@+id/cancel_btn"
+                android:layout_width="@dimen/img_button_sz"
+                android:layout_height="@dimen/img_button_sz"
+                android:background="@drawable/customized_button"
+                android:contentDescription="@string/image_button"
+                android:src="@drawable/icon_cls_btn"
+                app:backgroundTint="@null" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/btm_sheet_dash_brd"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#61000000"/>
+
+    <include layout="@layout/bottom_pop_up_sheet"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
